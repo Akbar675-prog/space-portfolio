@@ -62,7 +62,8 @@ export const Navbar = () => {
               rel="noreferrer noopener"
               key={name}
             >
-              <Icon className="h-6 w-6 text-white" />
+              {Icon && <Icon className="h-6 w-6 text-white" />}
+              {!Icon && <span className="text-white text-sm">{name}</span>}
             </Link>
           ))}
         </div>
@@ -111,7 +112,8 @@ export const Navbar = () => {
                 rel="noreferrer noopener"
                 key={name}
               >
-                <Icon className="h-8 w-8 text-white" />
+                {Icon && <Icon className="h-8 w-8 text-white" />}
+                {!Icon && <span className="text-white text-sm">{name}</span>}
               </Link>
             ))}
           </div>
